@@ -401,13 +401,13 @@ p {
 
 .navGridParent:hover {
     .navCircle {
-        background-image: url("../images/navButton_clicked.png") repeat 0 0;
+        background-image: url("/images/navButton_clicked.png") repeat 0 0;
     }
 }
 
 .navGridParent-margin:hover {
     .navCircle {
-        background-image: url("../images/navButton_clicked.png");
+        background-image: url("/images/navButton_clicked.png");
     }
 }
 
@@ -422,7 +422,7 @@ p {
 
 .indexParaGridParent-1L:hover {
     .paragraphCircle {
-        background-image: url('../images/navButton_clicked.png');
+        background-image: url('/images/navButton_clicked.png');
     }
 }
 
@@ -437,7 +437,7 @@ p {
 
 .indexParaGridParent-R:hover {
     .paragraphCircle {
-        background-image: url('../images/navButton_clicked.png');
+        background-image: url('/images/navButton_clicked.png');
     }
 }
 
@@ -452,7 +452,7 @@ p {
 
 .indexParaGridParent-2L:hover {
     .paragraphCircle {
-        background-image: url('../images/navButton_clicked.png');
+        background-image: url('/images/navButton_clicked.png');
     }
 }
 
@@ -523,7 +523,7 @@ p {
 }
 
 .navCircle {
-    background-image: url('../images/navButton_notClicked.png');
+    background-image: url('/images/navButton_notClicked.png');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: right;
@@ -532,7 +532,7 @@ p {
 }
 
 .circleClicked {
-    background-image: url('../images/navButton_clicked.png');
+    background-image: url('/images/navButton_clicked.png');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: right;
@@ -556,7 +556,7 @@ p {
 }
 
 .paragraphCircle {
-    background-image: url('../images/navButton_notClicked.png');
+    background-image: url('/images/navButton_notClicked.png');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center;
@@ -565,7 +565,7 @@ p {
 }
 
 .machuPicchuBG {
-    background-image: url('../images/machuPicchu.png');
+    background-image: url('/images/machuPicchu.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
@@ -575,7 +575,7 @@ p {
 }
 
 .mountainsBG-trans {
-    background-image: url('../images/mountainsTransp.png');
+    background-image: url('/images/mountainsTransp.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
@@ -583,7 +583,7 @@ p {
 }
 
 .mountainsBG-opaque {
-    background-image: url('../images/mountainsOpaque.png');
+    background-image: url('/images/mountainsOpaque.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
@@ -597,50 +597,50 @@ hr.invisible {
 }
 
 .geogGrid1 {
-    background-image: url('../images/andesValley-rect.png');
+    background-image: url('/images/andesValley-rect.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
 }
 
 .geogGrid2 {
-    background-image: url('../images/empireMap-rect.png');
+    background-image: url('/images/empireMap-rect.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
 }
 
 .geogGrid3 {
-    background-image: url('../images/cuscoMap-rect.png');
+    background-image: url('/images/cuscoMap-rect.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
 }
 
 .geogGrid4 {
-    background-image: url('../images/llama2-rect.png');
+    background-image: url('/images/llama2-rect.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
 }
 
 .geogGrid1:hover {
-    background-image: url('../images/andesValley-green.png');
+    background-image: url('/images/andesValley-green.png');
     transition: background-image 0.8s ease-in-out;
 }
 
 .geogGrid2:hover {
-    background-image: url('../images/empireMap-green.png');
+    background-image: url('/images/empireMap-green.png');
     transition: background-image 0.8s ease-in-out;
 }
 
 .geogGrid3:hover {
-    background-image: url('../images/cuscoMap-green.png');
+    background-image: url('/images/cuscoMap-green.png');
     transition: background-image 0.8s ease-in-out;
 }
 
 .geogGrid4:hover {
-    background-image: url('../images/llama2-green.png');
+    background-image: url('/images/llama2-green.png');
     transition: background-image 0.8s ease-in-out;
 }
 
@@ -660,7 +660,7 @@ hr.invisible {
 }
 
 .mountain1Img {
-    background-image: url('../images/mountain-top.png');
+    background-image: url('/images/mountain-top.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 160px;
@@ -674,7 +674,7 @@ hr.invisible {
 
 .mountain1:hover {
     .mountain1Img {
-        background-image: url('../images/mountain-topColour.png');
+        background-image: url('/images/mountain-topColour.png');
         transition: background-image 0.2s ease-in;
     }
 
@@ -691,7 +691,7 @@ hr.invisible {
 }
 
 .mountain2Img {
-    background-image: url('../images/mountain-midtop.png');
+    background-image: url('/images/mountain-midtop.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 160px;
@@ -705,7 +705,7 @@ hr.invisible {
 
 .mountain2:hover {
     .mountain2Img {
-        background-image: url('../images/mountain-midtopColour.png');
+        background-image: url('/images/mountain-midtopColour.png');
         transition: background-image 0.2s ease-in;
     }
 
@@ -722,7 +722,7 @@ hr.invisible {
 }
 
 .mountain3Img {
-    background-image: url('../images/mountain-midbot.png');
+    background-image: url('/images/mountain-midbot.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 160px;
@@ -736,7 +736,7 @@ hr.invisible {
 
 .mountain3:hover {
     .mountain3Img {
-        background-image: url('../images/mountain-midbotColour.png');
+        background-image: url('/images/mountain-midbotColour.png');
         transition: background-image 0.2s ease-in;
     }
 
@@ -753,7 +753,7 @@ hr.invisible {
 }
 
 .mountain4Img {
-    background-image: url('../images/mountain-bot.png');
+    background-image: url('/images/mountain-bot.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 160px;
@@ -767,7 +767,7 @@ hr.invisible {
 
 .mountain4:hover {
     .mountain4Img {
-        background-image: url('../images/mountain-botColour.png');
+        background-image: url('/images/mountain-botColour.png');
         transition: background-image 0.2s ease-in;
     }
 
@@ -778,14 +778,14 @@ hr.invisible {
 }
 
 .religionGrid1 {
-    background-image: url('../images/rel-mountain1.png');
+    background-image: url('/images/rel-mountain1.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 850px;
 }
 
 .religionGrid1:hover {
-    background-image: url('../images/rel-mountain1Colour.png');
+    background-image: url('/images/rel-mountain1Colour.png');
     transition: background-image 0.2s ease-in;
 
     .opacityText2 {
@@ -795,14 +795,14 @@ hr.invisible {
 }
 
 .religionGrid2 {
-    background-image: url('../images/rel-mountain2.png');
+    background-image: url('/images/rel-mountain2.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 850px;
 }
 
 .religionGrid2:hover {
-    background-image: url('../images/rel-mountain2Colour.png');
+    background-image: url('/images/rel-mountain2Colour.png');
     transition: background-image 0.2s ease-in;
 
     .opacityText1 {
@@ -812,14 +812,14 @@ hr.invisible {
 }
 
 .religionGrid3 {
-    background-image: url('../images/rel-mountain3.png');
+    background-image: url('/images/rel-mountain3.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 850px;
 }
 
 .religionGrid3:hover {
-    background-image: url('../images/rel-mountain3Colour.png');
+    background-image: url('/images/rel-mountain3Colour.png');
     transition: background-image 0.2s ease-in;
 
     .opacityText2 {
