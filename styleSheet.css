@@ -401,13 +401,13 @@ p {
 
 .navGridParent:hover {
     .navCircle {
-        background-image: url("../images/navButton_clicked.png");
+        background-image: url("../images/navButton_clicked.png") repeat 0 0;
     }
 }
 
 .navGridParent-margin:hover {
     .navCircle {
-        background-image: url('../images/navButton_clicked.png');
+        background-image: url("../images/navButton_clicked.png");
     }
 }
 
