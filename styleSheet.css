@@ -1,0 +1,1605 @@
+:root {
+    --Charcoal: #021C14;
+    --Jade: #107D60;
+    --Sage: #67B18C;
+    --OffWhite: #EFF8F4;
+    --Ruby: #9D112F;
+    --Gold: #F8BA47;
+    --LBrown: #5e4936;
+}
+
+/* Normalizing rules */
+body,
+html {
+    min-height: 100vh;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body.fullPage {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+
+
+/* Nav systems */
+.primaryNavMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: left;
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.horizontalMenu {
+    display: inline-block;
+}
+
+
+/* Hamgurger menu by Mr. Erik Terwan */
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 40px;
+    right: 30px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: var(--OffWhite);
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: var(--Gold);
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+}
+
+/* Make the burger + animate the urger*/
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: var(--Gold);
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--Sage);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    max-width: 400px;
+    width: 100vw;
+    max-height: 100vh;
+    margin: -100px 0 0 0;
+    padding-top: 125px;
+    right: -100px;
+
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: var(--Charcoal);
+    list-style-type: none;
+    border-style: solid;
+    border-color: var(--OffWhite);
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+
+    -webkit-font-smoothing: antialiased;
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menu li label {
+    cursor: pointer;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+    opacity: 1;
+}
+
+
+
+
+/* Named sections */
+header {
+    background-color: var(--Charcoal);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: var(--OffWhite);
+}
+
+footer {
+    background-color: var(--Charcoal);
+    padding: 10px;
+    justify-content: center;
+    font-size: 20px;
+
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: var(--OffWhite);
+}
+
+main {
+    background-color: var(--Charcoal);
+}
+
+
+/* Sections and div boxes */
+.titleBox {
+    margin-left: 14%;
+    margin-right: 14%;
+    margin-top: 15%;
+}
+
+.indexLinkParagraphs {
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-top: 35%;
+}
+
+
+
+
+
+/* Named text styles - h1:titles, h2:subtitles, h3:small titles*/
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Averia Serif Libre';
+    font-weight: 500;
+    color: var(--Gold);
+    font-size: 64px;
+}
+
+h2 {
+    text-decoration: none;
+    font-family: 'Athiti';
+    font-weight: 300;
+    font-size: 42px;
+    color: var(--Gold);
+}
+
+h3 {
+    text-decoration: none;
+    font-family: 'Athiti';
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--Gold);
+}
+
+.titleTHE {
+    margin-top: 250px;
+    margin-bottom: -55px;
+}
+
+.bottomMarginH3 {
+    margin-bottom: -20px;
+}
+
+h4 {
+    text-decoration: none;
+    font-family: 'Athiti';
+    font-weight: 300;
+    font-size: 24px;
+    margin: -5px;
+    color: var(--OffWhite);
+}
+
+h4.navBottomMargin {
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+
+h4:hover {
+    color: var(--Gold);
+}
+
+p {
+    font-size: 22;
+    font-family: 'Akatab', regular, sans-serif;
+    color: var(--OffWhite);
+}
+
+.pLink:hover {
+    color: var(--Gold);
+}
+
+
+/* Other text styles */
+.inlineLink:link {
+    color: var(--Gold);
+}
+
+.navTopMargin {
+    margin-top: 100px;
+}
+
+.navBottomMargin:hover {
+    color: var(--OffWhite);
+}
+
+.clickedLink {
+    color: var(--Gold);
+}
+
+.justifiedBody {
+    text-align: justify;
+}
+
+.whiteHover {
+    margin-bottom: -20px;
+    margin-top: 0;
+}
+
+.whiteHover:hover {
+    color: var(--OffWhite);
+}
+
+.goldHover {
+    color: var(--Sage);
+}
+
+.goldHover:hover {
+    color: var(--Gold);
+}
+
+
+.alignRight {
+    text-align: right;
+}
+
+.sortaCentred {
+    margin-top: 5%;
+    margin-left: 30px;
+}
+
+.geogVerticalAlign {
+    opacity: 0;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.geogVerticalAlign:hover {
+    opacity: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.geogCloseParas {
+    margin-left: 30px;
+    margin-right: 60px;
+    margin-bottom: 150px;
+}
+
+.opacityText1 {
+    margin-top: 80px;
+    opacity: 25%;
+}
+
+.opacityText2 {
+    margin-top: 200px;
+    opacity: 25%;
+}
+
+.relCloseParas {
+    margin-left: 30px;
+    margin-right: 60px;
+    margin-bottom: 150px;
+}
+
+
+
+
+/* Grids */
+.navGridParent {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 5px;
+    margin-left: 0px;
+    margin-right: 60px;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.navGridParent-margin {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 5px;
+    margin-left: 0px;
+    margin-right: 60px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.navGridParent:hover {
+    .navCircle {
+        background-image: url('../images/navButton_clicked.png');
+    }
+}
+
+.navGridParent-margin:hover {
+    .navCircle {
+        background-image: url('../images/navButton_clicked.png');
+    }
+}
+
+.indexParaGridParent-1L {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 18%;
+    margin-right: 28%;
+    margin-top: 32%;
+    margin-bottom: 30px;
+}
+
+.indexParaGridParent-1L:hover {
+    .paragraphCircle {
+        background-image: url('../images/navButton_clicked.png');
+    }
+}
+
+.indexParaGridParent-R {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-left: 28%;
+    margin-right: 18%;
+    margin-top: 12%;
+    margin-bottom: 30px;
+}
+
+.indexParaGridParent-R:hover {
+    .paragraphCircle {
+        background-image: url('../images/navButton_clicked.png');
+    }
+}
+
+.indexParaGridParent-2L {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 18%;
+    margin-right: 28%;
+    margin-top: 15%;
+    margin-bottom: 30px;
+}
+
+.indexParaGridParent-2L:hover {
+    .paragraphCircle {
+        background-image: url('../images/navButton_clicked.png');
+    }
+}
+
+.geographyMainGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    margin: 30px;
+}
+
+.agGridTip {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.agGridMidtop {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.agGridMidBot {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.agGridBot {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.religionGridParent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.religionClose-GridParent {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 50px;
+}
+
+.textAndImage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 30px;
+    margin-bottom: 40px;
+    grid-gap: 30px;
+}
+
+.sourceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    padding: 5px;
+    grid-gap: 15px;
+    align-content: center;
+}
+
+
+
+
+/* Images and backgrounds */
+.siteID {
+    width: 50%;
+}
+
+.navCircle {
+    background-image: url('../images/navButton_notClicked.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.circleClicked {
+    background-image: url('../images/navButton_clicked.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.navText {
+    text-align: left;
+}
+
+.navPathLine {
+    border-style: solid;
+    border-color: var(--LBrown);
+    border-width: 1.5px;
+    margin-left: 60px;
+    margin-top: -60px;
+    margin-bottom: -60px;
+    width: 0px;
+    height: 25px;
+}
+
+.paragraphCircle {
+    background-image: url('../images/navButton_notClicked.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.machuPicchuBG {
+    background-image: url('../images/machuPicchu.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mountainsBG-trans {
+    background-image: url('../images/mountainsTransp.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 2550px;
+}
+
+.mountainsBG-opaque {
+    background-image: url('../images/mountainsOpaque.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 2300px;
+}
+
+hr.invisible {
+    height: 400px;
+    width: 0px;
+    border-style: none;
+}
+
+.geogGrid1 {
+    background-image: url('../images/andesValley-rect.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.geogGrid2 {
+    background-image: url('../images/empireMap-rect.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.geogGrid3 {
+    background-image: url('../images/cuscoMap-rect.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.geogGrid4 {
+    background-image: url('../images/llama2-rect.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.geogGrid1:hover {
+    background-image: url('../images/andesValley-green.png');
+    transition: background-image 0.8s ease-in-out;
+}
+
+.geogGrid2:hover {
+    background-image: url('../images/empireMap-green.png');
+    transition: background-image 0.8s ease-in-out;
+}
+
+.geogGrid3:hover {
+    background-image: url('../images/cuscoMap-green.png');
+    transition: background-image 0.8s ease-in-out;
+}
+
+.geogGrid4:hover {
+    background-image: url('../images/llama2-green.png');
+    transition: background-image 0.8s ease-in-out;
+}
+
+.geogCloseGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 10px;
+    margin: 30px;
+    grid-gap: 30px;
+}
+
+.mountain1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+    margin-bottom: -2px;
+}
+
+.mountain1Img {
+    background-image: url('../images/mountain-top.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 160px;
+}
+
+.mountain1Text {
+    margin-left: -500px;
+    margin-right: 30px;
+    opacity: 20%;
+}
+
+.mountain1:hover {
+    .mountain1Img {
+        background-image: url('../images/mountain-topColour.png');
+        transition: background-image 0.2s ease-in;
+    }
+
+    .mountain1Text {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.mountain2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+}
+
+.mountain2Img {
+    background-image: url('../images/mountain-midtop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 160px;
+}
+
+.mountain2Text {
+    margin-left: -400px;
+    margin-right: 30px;
+    opacity: 20%;
+}
+
+.mountain2:hover {
+    .mountain2Img {
+        background-image: url('../images/mountain-midtopColour.png');
+        transition: background-image 0.2s ease-in;
+    }
+
+    .mountain2Text {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.mountain3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+}
+
+.mountain3Img {
+    background-image: url('../images/mountain-midbot.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 160px;
+}
+
+.mountain3Text {
+    margin-left: -270px;
+    margin-right: 30px;
+    opacity: 20%;
+}
+
+.mountain3:hover {
+    .mountain3Img {
+        background-image: url('../images/mountain-midbotColour.png');
+        transition: background-image 0.2s ease-in;
+    }
+
+    .mountain3Text {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.mountain4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+}
+
+.mountain4Img {
+    background-image: url('../images/mountain-bot.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 160px;
+}
+
+.mountain4Text {
+    margin-left: -200px;
+    margin-right: 30px;
+    opacity: 20%;
+}
+
+.mountain4:hover {
+    .mountain4Img {
+        background-image: url('../images/mountain-botColour.png');
+        transition: background-image 0.2s ease-in;
+    }
+
+    .mountain4Text {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.religionGrid1 {
+    background-image: url('../images/rel-mountain1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 850px;
+}
+
+.religionGrid1:hover {
+    background-image: url('../images/rel-mountain1Colour.png');
+    transition: background-image 0.2s ease-in;
+
+    .opacityText2 {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.religionGrid2 {
+    background-image: url('../images/rel-mountain2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 850px;
+}
+
+.religionGrid2:hover {
+    background-image: url('../images/rel-mountain2Colour.png');
+    transition: background-image 0.2s ease-in;
+
+    .opacityText1 {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.religionGrid3 {
+    background-image: url('../images/rel-mountain3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 850px;
+}
+
+.religionGrid3:hover {
+    background-image: url('../images/rel-mountain3Colour.png');
+    transition: background-image 0.2s ease-in;
+
+    .opacityText2 {
+        opacity: 100%;
+        transition: opacity 0.4s ease-in;
+    }
+}
+
+.relClose-Image {
+    background-image: none;
+}
+
+
+
+
+/* Responsive web rules */
+@media only screen and (max-width: 850px) {
+    .machuPicchuBG {
+        padding: 0px;
+    }
+
+    .mountainsBG-trans {
+        margin-top: 50px;
+        height: 1500px;
+    }
+
+    .mountainsBG-opaque {
+        margin-top: 400px;
+        background-image: none;
+        margin-left: -20px;
+        margin-right: -20px;
+        height: 1500px;
+    }
+
+    .titleBox {
+        margin-top: -330px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .justifiedBody {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .titleTHE {
+        font-size: 25px;
+        margin-bottom: -40px;
+    }
+
+    .indexParaGridParent-1L {
+        margin-top: 200px;
+    }
+
+    /* Geography */
+    .geogCloseGrid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -20px;
+        margin-bottom: -20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .geogCloseGrid1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .geogCloseGrid2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /* Agriculture */
+
+    .mountain1Text {
+        margin-left: -250px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: -220px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -160px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -120px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    /* Religion */
+    .religionGridParent {
+        height: 900px;
+    }
+
+    .religionGrid1 {
+        .opacityText2 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        height: 900px;
+    }
+
+    .religionGrid2 {
+        .opacityText1 {
+            font-size: 22px;
+            margin-top: 0px;
+        }
+
+        height: 900px;
+    }
+
+    .religionGrid3 {
+        .opacityText2 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        height: 900px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .machuPicchuBG {
+        padding: 0px;
+    }
+
+    .mountainsBG-trans {
+        margin-top: -50px;
+        height: 1700px;
+    }
+
+    .mountainsBG-opaque {
+        margin-top: 400px;
+        background-image: none;
+        margin-left: -20px;
+        margin-right: -20px;
+        height: 1700px;
+    }
+
+    .titleBox {
+        margin-top: -250px;
+        margin-left: 50px;
+        margin-right: 80px;
+    }
+
+    .justifiedBody {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    .titleTHE {
+        font-size: 40px;
+        margin-bottom: -70px;
+    }
+
+    .indexParaGridParent-1L {
+        margin-top: 150px;
+
+        .justifiedBody {
+            margin-top: 25px;
+        }
+    }
+
+    .indexParaGridParent-R {
+        .justifiedBody {
+            margin-top: 25px;
+        }
+    }
+
+    .indexParaGridParent-2L {
+        .justifiedBody {
+            margin-top: 25px;
+        }
+    }
+
+    footer {
+        .horizontalMenu {
+            margin-top: -80px;
+        }
+
+        padding-top: 0px;
+    }
+
+    .navGridParent {
+        .navCircle {
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+
+        .navText {
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+    }
+
+    .navGridParent-margin {
+        margin-top: 40px;
+    }
+
+    /* Geography */
+    .geographyMainGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .geogCloseGrid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 30px;
+        margin-bottom: -20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .geogCloseGrid1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .geogCloseGrid2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .geogCloseParas {
+        .justifiedBody {
+            margin-top: 20px;
+        }
+    }
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain1Text {
+        margin-left: -250px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: -220px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -160px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -120px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    /* Religion */
+    .religionGridParent {
+        height: 900px;
+    }
+
+    .religionGrid1 {
+        .opacityText2 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        height: 900px;
+    }
+
+    .religionGrid2 {
+        .opacityText1 {
+            font-size: 22px;
+            margin-top: 0px;
+        }
+
+        height: 900px;
+    }
+
+    .religionGrid3 {
+        .opacityText2 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        height: 900px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain1Text {
+        margin-left: -80px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: -30px;
+        padding-top: -100px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -180px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -120px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain2Text {
+        margin-left: 30000px;
+        padding-top: -100px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -140px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -80px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 715) {
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain1Text {
+        margin-left: -10px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: 0px;
+        padding-top: -100px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -140px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -80px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 635) {
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain1Text {
+        margin-left: -90px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: -120px;
+        padding-top: -100px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -140px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -80px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain1Text {
+        margin-left: -370px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: -310px;
+        padding-top: -200px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -180px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -120px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    /* Agriculture */
+    .sortaCentred {
+        h1 {
+            font-size: 60px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .textAndImage {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -80px;
+    }
+
+    .mountain1Text {
+        margin-left: -300px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain2Text {
+        margin-left: -230px;
+        padding-top: -100px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain3Text {
+        margin-left: -140px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+
+    .mountain4Text {
+        margin-left: -80px;
+        padding-top: -20px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .justifiedBody {
+            font-size: 15px;
+        }
+    }
+}
