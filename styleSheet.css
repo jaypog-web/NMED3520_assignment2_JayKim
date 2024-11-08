@@ -401,7 +401,7 @@ p {
 
 .navGridParent:hover {
     .navCircle {
-        background-image: url('../images/navButton_clicked.png');
+        background-image: url("../images/navButton_clicked.png");
     }
 }
 
